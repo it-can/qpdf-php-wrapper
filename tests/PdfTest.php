@@ -80,7 +80,7 @@ class PdfTest extends TestCase
     public function testRotate()
     {
         $this->assertEquals([[8.5, 11], [8.5, 11]], $this->pdfService->pageSizes($this->twoPagePdfPath));
-        $this->pdfService->rotate($this->twoPagePdfPath, Rotation::RIGHT, '2');
+        $this->pdfService->rotate($this->twoPagePdfPath, Rotation::Right, '2');
         $this->assertEquals([[8.5, 11], [11, 8.5]], $this->pdfService->pageSizes($this->twoPagePdfPath));
     }
 
@@ -184,14 +184,14 @@ class PdfTest extends TestCase
     public function testEnumUtilities()
     {
         // Int
-        $this->assertEquals(Rotation::RIGHT, Rotation::fromInt(90));
-        $this->assertEquals(Rotation::LEFT, Rotation::fromInt(-90));
-        $this->assertEquals(Rotation::DOWN, Rotation::fromInt(180));
-        $this->assertEquals(Rotation::UP, Rotation::fromInt(-180));
+        $this->assertEquals(Rotation::Right, Rotation::fromInt(90));
+        $this->assertEquals(Rotation::Left, Rotation::fromInt(-90));
+        $this->assertEquals(Rotation::Down, Rotation::fromInt(180));
+        $this->assertEquals(Rotation::Up, Rotation::fromInt(-180));
         // Cardinal
-        $this->assertEquals(Rotation::RIGHT, Rotation::fromCardinal('right'));
-        $this->assertEquals(Rotation::LEFT, Rotation::fromCardinal('left'));
-        $this->assertEquals(Rotation::DOWN, Rotation::fromCardinal('down'));
-        $this->assertEquals(Rotation::UP, Rotation::fromCardinal('up'));
+        $this->assertEquals(Rotation::Right, Rotation::fromCardinal('right'));
+        $this->assertEquals(Rotation::Left, Rotation::fromCardinal('left'));
+        $this->assertEquals(Rotation::Down, Rotation::fromCardinal('down'));
+        $this->assertEquals(Rotation::Up, Rotation::fromCardinal('up'));
     }
 }
