@@ -347,6 +347,6 @@ class Pdf
      */
     private function isSuccessful(Process $process): bool
     {
-        return in_array(ExitCode::tryFrom($process->getExitCode()), [ExitCode::success, ExitCode::warning]);
+        return in_array(ExitCode::tryFrom($process->getExitCode()), [ExitCode::Success, ExitCode::Warning]);
     }
 }

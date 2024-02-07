@@ -6,10 +6,10 @@ use InvalidArgumentException;
 
 enum Rotation: string
 {
-    CASE RIGHT = '+90';
-    CASE LEFT = '-90';
-    CASE DOWN = '+180';
-    CASE UP = '-180';
+    CASE Right = '+90';
+    CASE Left = '-90';
+    CASE Down = '+180';
+    CASE Up = '-180';
 
     /**
      * @param int $value
@@ -19,10 +19,10 @@ enum Rotation: string
     public static function fromInt(int $value): self
     {
         return match ($value) {
-            90 => self::RIGHT,
-            -90 => self::LEFT,
-            180 => self::DOWN,
-            -180 => self::UP,
+            90 => self::Right,
+            -90 => self::Left,
+            180 => self::Down,
+            -180 => self::Up,
             default => throw new InvalidArgumentException("Invalid rotation value: $value"),
         };
     }
@@ -35,10 +35,10 @@ enum Rotation: string
     public static function fromCardinal(string $value): self
     {
         return match ($value) {
-            'right' => self::RIGHT,
-            'left' => self::LEFT,
-            'down' => self::DOWN,
-            'up' => self::UP,
+            'right' => self::Right,
+            'left' => self::Left,
+            'down' => self::Down,
+            'up' => self::Up,
             default => throw new InvalidArgumentException("Invalid rotation value: $value"),
         };
     }

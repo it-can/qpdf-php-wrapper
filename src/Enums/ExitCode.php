@@ -7,17 +7,17 @@ enum ExitCode: int
     /**
      * no errors or warnings
      */
-    case success = 0;
+    case Success = 0;
     /**
      * not used by qpdf but may be used by the shell if unable to invoke qpdf
      */
-    case nonInvokable = 1;
+    case NonInvokable = 1;
     /**
      * errors detected
      */
-    case error = 2;
+    case Error = 2;
     /**
      * warnings detected, unless --warning-exit-0 is given
      */
-    case warning = 3;
+    case Warning = 3;
 }
