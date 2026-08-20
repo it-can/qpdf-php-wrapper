@@ -12,7 +12,7 @@ class Pdf
 {
     protected string $qpdfPath = 'qpdf';
 
-    public function setQpdfPath(string $path)
+    public function setQpdfPath(string $path): static
     {
         $this->qpdfPath = $path;
 
