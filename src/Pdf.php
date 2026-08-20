@@ -3,10 +3,10 @@
 namespace Msmahon\QpdfPhpWrapper;
 
 use Exception;
-use Symfony\Component\Process\Process;
 use Msmahon\QpdfPhpWrapper\Enums\ExitCode;
 use Msmahon\QpdfPhpWrapper\Enums\Rotation;
 use Symfony\Component\Process\Exception\ProcessFailedException;
+use Symfony\Component\Process\Process;
 
 class Pdf
 {
