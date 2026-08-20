@@ -277,7 +277,7 @@ class Pdf
      * @return array
      * @throws Exception
      */
-    public function parseRange(string $range, string $path = null): array
+    public function parseRange(string $range, ?string $path = null): array
     {
         $pages = explode(',', $range);
         $result = [];
@@ -314,7 +314,7 @@ class Pdf
      * @return void
      * @throws Exception
      */
-    public function applyStamp(string $documentPath, string $stampPath, string $range = null): void
+    public function applyStamp(string $documentPath, string $stampPath, ?string $range = null): void
     {
         // Overlay stamp on copy
         if (isset($range)) {
