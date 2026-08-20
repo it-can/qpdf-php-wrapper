@@ -1,5 +1,10 @@
 <phpunit
     bootstrap="vendor/autoload.php"
-    displayDetailsOnTestsThatTriggerWarnings="true"
+    colors="true"
 >
+    <testsuites>
+        <testsuite name="Application Test Suite">
+            <directory suffix="PdfTest.php">tests</directory>
+        </testsuite>
+    </testsuites>
 </phpunit>
